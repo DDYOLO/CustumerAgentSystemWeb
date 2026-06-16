@@ -1,0 +1,25 @@
+.sider {
+  min-height: 100vh;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 56px;
+  padding: 0 18px;
+  color: #ffffff;
+  font-weight: 600;
+}
+
+.logo {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 6px;
+  background: #1677ff;
+  color: #ffffff !important;
+  font-weight: 700;
+}
