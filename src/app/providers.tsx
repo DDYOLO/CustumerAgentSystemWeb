@@ -1,22 +1,24 @@
-import type { PropsWithChildren } from "react";
-import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
-import { ConfigProvider } from "antd";
-import { antdTheme } from "../styles/antd-theme";
+"use client";
 
-const queryClient = new QueryClient({
-  defaultOptions: {
-    queries: {
-      staleTime: 30_000,
-      refetchOnWindowFocus: false,
-      retry: 1,
-    },
-  },
-});
+import { ConfigProvider, App as AntdApp } from "antd";
+import zhCN from "antd/locale/zh_CN";
+import type { ReactNode } from "react";
+import "../styles/globals.scss";
 
-export function AppProviders({ children }: PropsWithChildren) {
+export function Providers({ children }: { children: ReactNode }) {
   return (
-    <ConfigProvider theme={antdTheme}>
-      <QueryClientProvider client={queryClient}>{children}</QueryClientProvider>
+    <ConfigProvider
+      locale={zhCN}
+      theme={{
+        token: {
+          colorPrimary: "#2563eb",
+          borderRadius: 6,
+          fontFamily:
+            "Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif",
+        },
+      }}
+    >
+      <AntdApp>{children}</AntdApp>
     </ConfigProvider>
   );
 }

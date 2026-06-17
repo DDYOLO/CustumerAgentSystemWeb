@@ -4,10 +4,10 @@
   "version": "0.1.0",
   "type": "module",
   "scripts": {
-    "dev": "vite",
-    "build": "tsc -b && vite build",
-    "preview": "vite preview",
-    "lint": "eslint ."
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
   },
   "dependencies": {
     "@ant-design/charts": "^2.2.7",
@@ -17,18 +17,19 @@
     "antd": "^5.21.6",
     "axios": "^1.7.7",
     "dayjs": "^1.11.13",
+    "next": "^14.2.32",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
     "react-router-dom": "^6.27.0",
     "zod": "^3.23.8"
   },
   "devDependencies": {
+    "@types/node": "25.9.3",
     "@types/react": "^18.3.11",
     "@types/react-dom": "^18.3.1",
-    "@vitejs/plugin-react": "^4.3.3",
-    "eslint": "^9.12.0",
+    "eslint": "^8.57.1",
+    "eslint-config-next": "^14.2.32",
     "sass": "^1.79.5",
-    "typescript": "^5.6.3",
-    "vite": "^5.4.9"
+    "typescript": "^5.6.3"
   }
 }
